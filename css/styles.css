@@ -1335,73 +1335,42 @@ footer {
     min-height: 100vh; /* Ensures the container takes the full viewport height */
   }
 
-form {
-  margin: 0 auto; /* Centers the form horizontally */
-  width: 100%;
-  max-width: 600px; /* Slightly smaller so it’s nicely centered */
-  padding: 20px;
-  text-align: center;
-  background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  box-sizing: border-box;
-}
-
-/* Make all input types consistent */
 input[type="text"],
-input[type="email"],
 input[type="tel"],
+input[type="email"],
 textarea {
   width: 100%;
-  padding: 15px;
-  margin: 20px 0;
-  border: 1px solid #ccc;
-  border-radius: 25px;
-  box-sizing: border-box;
-  font-size: 14px;
+  padding: 14px 20px;
+  margin: 15px 0;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
   outline: none;
+  transition: 0.3s ease;
 }
 
-/* Placeholder color */
-input[type="text"]::placeholder,
-input[type="email"]::placeholder,
-input[type="tel"]::placeholder,
-textarea::placeholder {
-  color: #999;
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border-color: #28a745;
+  box-shadow: 0 0 5px rgba(40, 167, 69, 0.3);
 }
 
-/* Textarea height */
-textarea {
-  height: 200px;
-  resize: none;
-}
-
-/* Submit button */
 input[type="submit"] {
-  width: 50%;
-  padding: 15px;
-  margin: 20px auto;
-  display: block;
-  border: none;
-  border-radius: 25px;
+  width: 100%;
+  padding: 14px;
   background-color: #28a745;
   color: #fff;
+  border: none;
+  border-radius: 8px;
   font-size: 16px;
   cursor: pointer;
-  box-sizing: border-box;
-  transition: background-color 0.3s ease;
+  transition: background 0.3s ease;
 }
 
 input[type="submit"]:hover {
-  background-color: #cc5200;
-}
-
-/* Optional: center the whole contact section */
-#contact {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  background-color: #218838;
 }
 
   footer {
