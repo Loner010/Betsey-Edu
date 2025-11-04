@@ -67,18 +67,12 @@ img {
 }
 
 .form-container {
-  text-align: center;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
-  display: block;
-}
-.form-container {
-  text-align: center;
-  margin: 0 auto;
-  min-height: 100vh;
-  display: block;
-}
-
+  
 
 /* Next & previous buttons */
 .prev,
