@@ -66,6 +66,20 @@ img {
   cursor: pointer;
 }
 
+.form-container {
+  text-align: center;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: block;
+}
+.form-container {
+  text-align: center;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: block;
+}
+
+
 /* Next & previous buttons */
 .prev,
 .next {
