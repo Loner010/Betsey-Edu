@@ -298,6 +298,14 @@ body {
   padding: 20px;
 }
 
+.form-container h2 {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  color: #fa4e82;
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 30px; /* Space between header and form */
+}
+
 /* Set all buttons to the same color */
 button,
 input[type="button"],
