@@ -1,5 +1,5 @@
 /* ============================= */
-/* GLOBAL FIXES (SAFE OVERRIDES)
+/* SAFE GLOBAL FIXES (NO COLOR CHANGES)
 /* ============================= */
 
 * {
@@ -9,11 +9,11 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: inherit; /* keeps your original font */
 }
 
 /* ============================= */
-/* HEADER FIX (image + text layout)
+/* HEADER FIX (image + text alignment)
 /* ============================= */
 
 .header-container {
@@ -37,25 +37,31 @@ body {
 }
 
 /* ============================= */
-/* NAVBAR LINK FIX */
+/* NAVBAR (KEEP YOUR COLORS)
 /* ============================= */
 
 nav a {
   text-decoration: none;
-  cursor: pointer;
+  font-family: inherit;
 }
 
+/* hover only (no color override) */
 nav a:hover {
   opacity: 0.8;
 }
 
 /* ============================= */
-/* SLIDESHOW FIX */
+/* SLIDESHOW FIX (DOES NOT CHANGE DESIGN)
 /* ============================= */
+
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+}
 
 .mySlides {
   display: none;
-  width: 100%;
 }
 
 .mySlides img {
@@ -73,18 +79,10 @@ nav a:hover {
 
 .demo.active {
   opacity: 1;
-  border: 2px solid #000;
-}
-
-/* slideshow container */
-.slideshow-container {
-  position: relative;
-  max-width: 100%;
-  margin: auto;
 }
 
 /* ============================= */
-/* CONTACT SECTION FIX */
+/* CONTACT ANCHOR FIX */
 /* ============================= */
 
 #contact {
@@ -92,28 +90,31 @@ nav a:hover {
 }
 
 /* ============================= */
-/* FOOTER MAP IMAGE FIX */
+/* FOOTER (SMALLER + CLEANER)
 /* ============================= */
 
+footer {
+  padding: 10px 15px; /* reduced size */
+  text-align: center;
+  font-size: 14px; /* smaller text */
+}
+
+/* smaller map image */
 footer img {
-  width: 120px !important;
+  width: 90px !important;
   height: auto !important;
   object-fit: contain;
-  display: inline-block;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
-/* if map is clickable */
-footer a img {
-  transition: transform 0.2s ease;
-}
-
+/* hover effect only */
 footer a img:hover {
   transform: scale(1.05);
+  transition: 0.2s ease;
 }
 
 /* ============================= */
-/* MOBILE RESPONSIVE FIX */
+/* MOBILE RESPONSIVE FIXES */
 /* ============================= */
 
 @media (max-width: 768px) {
@@ -124,7 +125,7 @@ footer a img:hover {
   }
 
   .header-container img {
-    max-width: 180px;
+    max-width: 160px;
   }
 
 }
