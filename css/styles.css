@@ -58,23 +58,21 @@ section {
    HERO FIX (IMAGE NOT SHOWING ISSUE)
    ========================= */
 
-.hero_box {
+.main-intro {
+  min-height: 90vh;
+
+  background: linear-gradient(
+      rgba(255, 250, 245, 0.6),
+      rgba(255, 250, 245, 0.6)
+    ),
+    url("../images/heroImage.jpeg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
   display: flex;
   align-items: center;
-  justify-content: center;
-  min-height: 80vh;
-}
-
-.maintext {
-  max-width: 650px;
-}
-
-/* FIX: header image visibility */
-.maintext img {
-  display: block;
-  max-width: 220px;
-  height: auto;
-  margin-bottom: 20px;
 }
 
 /* =========================
