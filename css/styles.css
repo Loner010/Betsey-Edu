@@ -1,130 +1,261 @@
-/* ============================= */
-/* GLOBAL FIXES (SAFE OVERRIDES)
-/* ============================= */
+/* =========================
+   BETSEY EDUCARE DESIGN SYSTEM (UNCHANGED)
+   ========================= */
 
-* {
-  box-sizing: border-box;
+:root {
+  --primary: #f4a261;
+  --secondary: #2a9d8f;
+  --background: #fffaf5;
+  --text: #333333;
+  --muted: #6b6b6b;
+  --card: #ffffff;
+  --border: #f0e6dc;
+
+  --radius: 14px;
+  --shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
 }
+
+/* =========================
+   BASE
+   ========================= */
 
 body {
   margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: "Poppins", Arial, sans-serif;
+  background: var(--background);
+  color: var(--text);
+  line-height: 1.6;
 }
 
-/* ============================= */
-/* HEADER FIX (image + text layout)
-/* ============================= */
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
-.header-container {
+section {
+  padding: 60px 20px;
+}
+
+/* =========================
+   NAVBAR (Bootstrap-safe fix)
+   ========================= */
+
+.navbar {
+  background: #ffffff !important;
+  box-shadow: var(--shadow);
+}
+
+.navbar a {
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.navbar a:hover {
+  color: var(--primary);
+}
+
+/* =========================
+   HERO FIX (IMAGE NOT SHOWING ISSUE)
+   ========================= */
+
+.hero_box {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  flex-wrap: wrap;
-  padding: 20px;
+  justify-content: center;
+  min-height: 80vh;
 }
 
-.header-container img {
+.maintext {
+  max-width: 650px;
+}
+
+/* FIX: header image visibility */
+.maintext img {
+  display: block;
   max-width: 220px;
   height: auto;
-  object-fit: contain;
+  margin-bottom: 20px;
 }
 
-.header-container p {
-  flex: 1;
-  min-width: 250px;
+/* =========================
+   BUTTONS (keep Bootstrap compatible)
+   ========================= */
+
+button,
+.btn-primary,
+input[type="submit"] {
+  background: var(--primary) !important;
+  border: none !important;
+  color: white !important;
+  padding: 12px 20px;
+  border-radius: 10px;
+  transition: 0.3s;
 }
 
-/* ============================= */
-/* NAVBAR LINK FIX */
-/* ============================= */
-
-nav a {
-  text-decoration: none;
-  cursor: pointer;
+button:hover,
+.btn-primary:hover {
+  background: #e76f51 !important;
 }
 
-nav a:hover {
-  opacity: 0.8;
+/* =========================
+   INTRO SECTION
+   ========================= */
+
+.container3 h2 {
+  margin-bottom: 10px;
 }
 
-/* ============================= */
-/* SLIDESHOW FIX */
-/* ============================= */
+/* =========================
+   GALLERY FIX (SLIDER NOT WORKING)
+   ========================= */
+
+.container2 {
+  position: relative;
+  max-width: 900px;
+  margin: auto;
+}
 
 .mySlides {
   display: none;
-  width: 100%;
 }
 
 .mySlides img {
   width: 100%;
-  height: auto;
-  display: block;
+  border-radius: var(--radius);
 }
 
-/* dots */
-.demo {
+/* arrows */
+.prev,
+.next {
   cursor: pointer;
-  opacity: 0.6;
-  transition: 0.3s;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 12px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  background: rgba(0,0,0,0.4);
+  border-radius: 50%;
+  user-select: none;
 }
 
-.demo.active {
-  opacity: 1;
-  border: 2px solid #000;
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.prev:hover,
+.next:hover {
+  background: rgba(0,0,0,0.7);
 }
 
-/* slideshow container */
-.slideshow-container {
-  position: relative;
-  max-width: 100%;
-  margin: auto;
+/* =========================
+   SERVICES CARDS
+   ========================= */
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
 }
 
-/* ============================= */
-/* CONTACT SECTION FIX */
-/* ============================= */
+/* =========================
+   CONTACT FORM
+   ========================= */
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+form {
+  background: var(--card);
+  padding: 30px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  max-width: 600px;
+  width: 100%;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-family: inherit;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+/* =========================
+   FOOTER FIX (SMALL + CLEAN)
+   ========================= */
+
+footer {
+  background: #ffffff;
+  border-top: 1px solid var(--border);
+  padding: 15px 10px; /* SMALLER FOOTER */
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.container-f {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+}
+
+/* FIX: footer map image too big */
+footer img {
+  width: 110px !important;
+  height: auto !important;
+  border-radius: 10px;
+}
+
+/* social icons */
+.footer-social a {
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.footer-social a:hover {
+  color: var(--primary);
+}
+
+/* =========================
+   CONTACT ANCHOR FIX
+   ========================= */
 
 #contact {
   scroll-margin-top: 80px;
 }
 
-/* ============================= */
-/* FOOTER MAP IMAGE FIX */
-/* ============================= */
-
-footer img {
-  width: 120px !important;
-  height: auto !important;
-  object-fit: contain;
-  display: inline-block;
-  margin-top: 10px;
-}
-
-/* if map is clickable */
-footer a img {
-  transition: transform 0.2s ease;
-}
-
-footer a img:hover {
-  transform: scale(1.05);
-}
-
-/* ============================= */
-/* MOBILE RESPONSIVE FIX */
-/* ============================= */
+/* =========================
+   MOBILE
+   ========================= */
 
 @media (max-width: 768px) {
 
-  .header-container {
+  .hero_box {
     flex-direction: column;
     text-align: center;
   }
 
-  .header-container img {
-    max-width: 180px;
+  .maintext img {
+    max-width: 160px;
   }
 
+  .container-f {
+    flex-direction: column;
+    text-align: center;
+  }
 }
